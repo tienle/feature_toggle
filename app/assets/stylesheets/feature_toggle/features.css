@@ -1,0 +1,99 @@
+.checkbox {
+  position: relative;
+  top: -0.375rem;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+.checkbox:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #f2f2f2;
+}
+.checkbox:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: #009688;
+  border-top-style: none;
+  border-right-style: none;
+}
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: -0.125rem;
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.button--round {
+  -webkit-transition: 0.3s background ease-in-out;
+  -moz-transition: 0.3s background ease-in-out;
+  transition: 0.3s background ease-in-out;
+  width: 2rem;
+  height: 2rem;
+  background: #5677fc;
+  border-radius: 50%;
+  box-shadow: 0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.button--round i {
+  font-size: 1rem;
+  line-height: 220%;
+  vertical-align: middle;
+}
+.button--round:hover {
+  background: #3b50ce;
+}
+
+.button--sticky {
+  position: fixed;
+  right: 2rem;
+  top: 16rem;
+}
+
+.content {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: slideUp;
+  animation-name: slideUp;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(6.25rem);
+    transform: translateY(6.25rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(6.25rem);
+    transform: translateY(6.25rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

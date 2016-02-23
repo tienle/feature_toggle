@@ -97,3 +97,7 @@
     transform: translateY(0);
   }
 }
+
+.feature-table { display: table; }
+.feature-table-row { display: table-row; }
+.feature-table-cell { display: table-cell; }

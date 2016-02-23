@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.name        = "feature_toggle"
   s.version     = FeatureToggle::VERSION
   s.authors     = ["Tien Le"]
-  s.email       = ["tienlx@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of FeatureToggle."
-  s.description = "TODO: Description of FeatureToggle."
+  s.email       = ["tienlex@gmail.com"]
+  s.homepage    = "https://github.com/tienle/feature_toggle"
+  s.summary     = "Feature toggles on the fly"
+  s.description = "Declare and manage feature flags easily"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

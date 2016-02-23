@@ -7,5 +7,9 @@ module FeatureToggle
         Rails.application.config.paths["db/migrate"] << expanded_path
       end
     end
+
+    initializer :assets do |config|
+      Rails.application.config.assets.precompile += %w{ feature_toggle/features.css feature_toggle/features.js }
+    end
   end
 end

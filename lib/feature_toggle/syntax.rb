@@ -13,14 +13,14 @@ module FeatureToggle
       end
 
       def feature(name, &block)
-        self.features << Feature.new(name, &block)
+        self.features << Feature.new(name, block)
       end
 
       def state(name, &block)
-        self.states << State.new(name, &block)
+        self.states << State.new(name, block)
       end
 
-      private
+      protected
 
       def states
         FeatureToggle.states
@@ -41,10 +41,9 @@ end
     #feature :delete
   #end
 
-  #state :premium do
+  #state :premium,
     #desc "Premium user"
-
-    #current_user.paid?
+    #value { current_user.paid? }
   #end
 
   #state :free do

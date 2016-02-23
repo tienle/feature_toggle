@@ -1,0 +1,19 @@
+<%= javascript_include_tag "feature_toggle/features" %>
+<%= stylesheet_link_tag "feature_toggle/features" %>
+
+<div class='feature-table'>
+  <div class='feature-table-row'>
+    <div class='feature-table-cell'>&nbsp;</div>
+
+    <% FeatureToggle.states.each do |state| %>
+      <div class='feature-table-cell'>
+        <strong><%= state.name %></strong>
+        <p class='desc'><%= state.desc %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <% FeatureToggle.features.each do |feature| %>
+    <%= render partial: 'feature', locals: { feature: feature } %>
+  <% end %>
+</div>

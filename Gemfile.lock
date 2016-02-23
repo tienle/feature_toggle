@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    feature_toggle (0.0.1)
+    feature_toggle (1.0.0)
       rails (~> 4.2)
 
 GEM

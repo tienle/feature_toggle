@@ -6,7 +6,7 @@
 
   <% FeatureToggle.states.each do |state| %>
     <div class='feature-table-cell'>
-      <input type="checkbox" class="checkbox" data-state-name="<%= state.name %>" value="1" <%= 'checked' if turn_on_feature?(feature, state) %>>&nbsp;</input>
+      <input type="checkbox" class="checkbox" data-feature-name="<%= feature.name %>" data-state-name="<%= state.name %>" value="1" <%= 'checked' if turn_on_feature?(feature, state) %>>&nbsp;</input>
     </div>
   <% end %>
 </div>

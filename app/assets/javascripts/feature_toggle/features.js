@@ -1,2 +1,15 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(function() {
+  $(document).on('click', '.feature-table .checkbox', function(e) {
+    var $el = $(e.target);
+
+    $.ajax({
+      type: "POST",
+      url: window.toggleFeaturePath,
+      data: {
+        "feature": $el.data('feature-name'),
+        "state": $el.data('state-name'),
+        "enable": $el.is(':checked')
+      }
+    });
+  });
+});

@@ -1,4 +1,4 @@
-= FeatureToggle
+# Feature Toggle
 
 ## Introduction
 
@@ -6,9 +6,13 @@ This gem allows to manage (enable/disable) application features on the fly depen
 There is an UI for toggling the relation (feature matrix) between features and states.
 
 ![Image of UI]
-(http://i.imgur.com/CvrN2n7.png)
+(http://i.imgur.com/FC8zrvC.png)
+
+
+Terms:
 
 **feature**: Define a feature
+
 **state**: Define a state (beta, paid user, etc...)
 
 ## Usage
@@ -72,5 +76,9 @@ You could toggle feature programmatically by:
 ```ruby
   FeatureToggle::Feature.create(feature: 'employee_file', state: 'premium', enable: true)
 ```
+
+Happy coding!
+
+--------
 
 This project rocks and uses MIT-LICENSE.

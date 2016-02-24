@@ -72,11 +72,11 @@ Describe the different features and states
 ```
 
 #### 3) Usage
-Include this helper into your `application_helper.rb`
+Include this mixins into your `application_controller.rb`
 
 ```ruby
-module ApplicationHelper
-  include FeatureToggle::FeaturesHelper
+class ApplicationController < ActionController::Base
+  include FeatureToggle::Controller
 end
 ```
 
@@ -96,6 +96,15 @@ With `state_context` is the `self` binding for state's `value` block.
 
 So, the feature will be enabled if we have turned on it for one of the states that meet the `value` condition.
 
+From the controller:
+
+```ruby
+  class EmployeesController < ApplicationController
+    require_feature! :employee_file
+  end
+```
+
+It will raise an exception `FeatureToggle::NotAuthorizedError` if there are no states matched.
 
 You could toggle feature programmatically by:
 

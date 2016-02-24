@@ -1,9 +1,13 @@
-require "feature_toggle/engine"
+require 'feature_toggle/engine'
 require 'feature_toggle/syntax'
+require 'feature_toggle/controller'
 require 'ostruct'
 
 module FeatureToggle
   extend Syntax
+
+  class Error < StandardError; end
+  class NotAuthorizedError < Error; end
 
   def self.setup(&block)
     yield configuration

@@ -21,7 +21,7 @@ Terms:
 
 Add to your Gemfile:
 ```ruby
-  gem 'feature_toggle'
+  gem 'features_toggle'
 ```
 
 #### 2) Configuration

@@ -90,7 +90,7 @@ From the view (eg. Haml)
 Or
 
 ```ruby
-FeatureToggle.on?(:employee_file, state_context)`
+FeatureToggle.on?(:employee_file, state_context)
 ```
 With `state_context` is the `self` binding for state's `value` block.
 

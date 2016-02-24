@@ -5,7 +5,7 @@ require "feature_toggle/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "features_toggle"
+  s.name        = "feature_toggle"
   s.version     = FeatureToggle::VERSION
   s.authors     = ["Tien Le"]
   s.email       = ["tienlex@gmail.com", "tien.le@employmentinnovations.com"]

@@ -21,7 +21,7 @@ Terms:
 
 Add to your Gemfile:
 ```ruby
-  gem 'features_toggle'
+  gem 'feature_toggle', github: 'tienle/feature_toggle'
 ```
 
 #### 2) Configuration

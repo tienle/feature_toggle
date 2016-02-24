@@ -6,7 +6,7 @@ This gem allows to manage (enable/disable) application features on the fly depen
 There is an UI for toggling the relation (feature matrix) between features and states.
 
 ![Image of UI]
-(http://imgur.com/CvrN2n7)
+(http://i.imgur.com/CvrN2n7.png)
 
 **feature**: Define a feature
 **state**: Define a state (beta, paid user, etc...)

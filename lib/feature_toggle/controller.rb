@@ -7,8 +7,8 @@ module FeatureToggle
     end
 
     class_methods do
-      def require_feature!(feature)
-        before_action do |controller|
+      def require_feature!(feature, options = {})
+        before_action(options) do |controller|
           raise FeatureToggle::NotAuthorizedError unless FeatureToggle.on?(feature, controller)
         end
       end
